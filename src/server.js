@@ -14,11 +14,6 @@ app.set('view engine', 'jsx');
 app.use(express.static('public'));
 app.use(express.json());
 
-app.use((req, res, next) => {
-  res.locals.user = { id: 1, name: 'Anton' };
-  next();
-});
-
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 

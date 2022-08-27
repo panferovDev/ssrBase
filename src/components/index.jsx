@@ -12,3 +12,4 @@ ReactDOMClient.hydrateRoot(
     <App {...window.initState} />
   </BrowserRouter>,
 );
+delete window.initState;

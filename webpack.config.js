@@ -34,9 +34,9 @@ const config = {
         vendors: false,
 
         vendor: {
-          chunks: 'all', // both : consider sync + async chunks for evaluation
-          name: 'vendor', // имя чанк-файла
-          test: /node_modules/, // test regular expression
+          chunks: 'all',
+          name: 'vendor',
+          test: /node_modules/,
         },
       },
     },

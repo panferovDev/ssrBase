@@ -8,6 +8,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 public/js/app.js
 public/js/vendor.js
+distr
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
