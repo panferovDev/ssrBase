@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../redux/slices/userSlice';
 
 function MainPage() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setUser({ name: 'Artem' }));
+  }, []);
   return (
-    <div>
-      Hello World
-    </div>
+    <h1>Hello world</h1>
   );
 }
 

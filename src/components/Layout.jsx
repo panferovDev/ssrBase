@@ -1,6 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router-dom/server';
+import { configureStore } from '@reduxjs/toolkit';
 import App from './App';
+import userSlice from '../redux/slices/userSlice';
 
 export default function Layout({ initState }) {
   delete initState.settings;
@@ -26,7 +29,17 @@ export default function Layout({ initState }) {
       <body>
         <div id="root">
           <StaticRouter location={initState.path}>
-            <App {...initState} />
+            <Provider store={configureStore({
+              reducer: {
+                user: userSlice,
+              },
+              preloadedState: {
+                user: initState.user || null,
+              },
+            })}
+            >
+              <App />
+            </Provider>
           </StaticRouter>
         </div>
       </body>

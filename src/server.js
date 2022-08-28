@@ -4,7 +4,7 @@ import apiRouter from './routes/apiRouter';
 import indexRouter from './routes/indexRouter';
 import customRender from './utils/customRender';
 
-const PORT = process.env.PORT ?? 3005;
+const PORT = process.env.PORT ?? 3006;
 
 const app = express();
 
